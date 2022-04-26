@@ -2,9 +2,10 @@
 
 RiverPlane::RiverPlane(sf::RenderWindow& window, bool right, int startingPosition, int globalTickrate) :
 	Plane(window, right, startingPosition) {
-
-	// Set planes color
-	shape.setFillColor(sf::Color(121, 163, 255));
+	// Sprite
+	sprite.setTexture(*SpriteDispenser::getTexturePoiner("water"));
+	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+	sprite.setPosition(shape.getPosition());
 	// Spawn logs
 	int i = 0;
 	while (i < shape.getSize().x) {
@@ -16,42 +17,35 @@ RiverPlane::RiverPlane(sf::RenderWindow& window, bool right, int startingPositio
 }
 
 void RiverPlane::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
-	
-	// If frog on river
-	if (shape.getGlobalBounds().contains(
-	frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-	frog.getShape().getPosition().y + frog.getShape().getSize().y / 2)) 
-	{
-		// If frog on log -> dont kill it
-		bool killHim = true;
-		for (auto& log : movingEntities) {
-			if (log->getShape().getGlobalBounds().contains(
-				frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-				frog.getShape().getPosition().y + frog.getShape().getSize().y / 2))
-			{
-				killHim = false;
-			}
-		}
-		// If frog not on log -> kill it
-		if (killHim)
-			frog.getShape().setPosition(0, window.getSize().y - frog.getShape().getSize().y);
+	if (frogOnRiver(window, frog) && !frogOnLog(window, frog))
+		frog.die(window);
+	moveElements(window, globalTickrate, frog);
+}
+
+bool RiverPlane::frogOnRiver(sf::RenderWindow& window, Frog& frog) {
+	return (shape.getGlobalBounds().contains(
+		frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
+		frog.getShape().getPosition().y + frog.getShape().getSize().y / 2));
+}
+
+bool RiverPlane::frogOnLog(sf::RenderWindow& window, Frog& frog) {
+	bool frogOnLog = false;
+	for (auto& log : movingEntities) {
+		if (log->frogOnObject(window, frog))
+			frogOnLog = true;
 	}
-	
-	// Flow of elements
+	return frogOnLog;
+}
+
+void RiverPlane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	for (auto& x : movingEntities) {
-		// Move every element
-		x->move(globalTickrate, window, frog);
-		// If element flew away -> reset element position and reroll its size
+		x->performTick(window, globalTickrate, frog);
 		if (x->getShape().getPosition().x > shape.getSize().x) {
-			// Size reroll
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
-			// Reposition
 			x->getShape().setPosition(shape.getPosition());
 		}
 		else if (x->getShape().getPosition().x < shape.getPosition().x) {
-			// Size reroll
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
-			// Reposition
 			x->getShape().setPosition(shape.getSize().x, shape.getPosition().y);
 		}
 	}

@@ -1,13 +1,17 @@
 ﻿# include "frog.h"
 
 Frog::Frog(sf::Vector2f windowSize) {
-	frog.setFillColor(sf::Color::Green);
+	// Hitbox
 	frog.setSize(sf::Vector2f(40, 40));
-	frog.setPosition(sf::Vector2f(frog.getPosition().x, windowSize.y - frog.getSize().y));
+	frog.setPosition(sf::Vector2f(frog.getPosition().x, windowSize.y - frog.getSize().y));;
+	// Sprite
+	sprite.setTexture(*SpriteDispenser::getTexturePoiner("frog"));
+	sprite.setTextureRect(sf::IntRect(frog.getPosition().x, frog.getPosition().y, frog.getSize().x, frog.getSize().y));
 }
 
 void Frog::draw(sf::RenderWindow& window) {
-	window.draw(frog);
+	sprite.setPosition(frog.getPosition());
+	window.draw(sprite);
 }
 
 sf::RectangleShape& Frog::getShape() {
@@ -24,4 +28,8 @@ void Frog::move(sf::RenderWindow& window) {
 		frog.move(0, -frog.getSize().y);
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down) && frog.getPosition().y < window.getSize().y - frog.getSize().y)
 		frog.move(0, frog.getSize().y);
+}
+
+void Frog::die(sf::RenderWindow& window) {
+	frog.setPosition(0, window.getSize().y - frog.getSize().y);
 }

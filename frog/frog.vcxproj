@@ -165,6 +165,7 @@
     <ClCompile Include="plane.cpp" />
     <ClCompile Include="riverPlane.cpp" />
     <ClCompile Include="roadPlane.cpp" />
+    <ClCompile Include="spriteDispenser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="carEntity.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="plane.h" />
     <ClInclude Include="riverPlane.h" />
     <ClInclude Include="roadPlane.h" />
+    <ClInclude Include="spriteDispenser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

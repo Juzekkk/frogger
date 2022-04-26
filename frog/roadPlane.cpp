@@ -4,7 +4,9 @@ RoadPlane::RoadPlane(sf::RenderWindow& window, bool right, int startingPosition,
 	Plane(window, right, startingPosition) {
 
 	// Set plane color
-	shape.setFillColor(sf::Color(30,30,30));
+	sprite.setTexture(*SpriteDispenser::getTexturePoiner("road"));
+	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+	sprite.setPosition(shape.getPosition());
 	// Spawn cars
 	int i = 0;
 	while (i < shape.getSize().x) {
@@ -16,9 +18,13 @@ RoadPlane::RoadPlane(sf::RenderWindow& window, bool right, int startingPosition,
 }
 
 void RoadPlane::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
+	moveElements(window, globalTickrate, frog);
+}
+
+void RoadPlane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	for (auto& x : movingEntities) {
 		// Move car
-		x->move(globalTickrate, window, frog);
+		x->performTick(window, globalTickrate, frog);
 		// If element flew away -> reset element position and reroll its size
 		if (x->getShape().getPosition().x > shape.getSize().x) {
 			// Size reroll

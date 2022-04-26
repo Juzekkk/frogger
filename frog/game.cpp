@@ -1,14 +1,17 @@
 #include "game.h"
 
 
-Game::Game(int windowWidth, int windowHeight, int tick_rate, int FPS) {
+Game::Game(int tick_rate, int FPS) {
 	srand((unsigned)time(0));
 	tickrate = tick_rate;
-	window = new sf::RenderWindow(sf::VideoMode(windowWidth, windowHeight), "frog");
+	window = new sf::RenderWindow(sf::VideoMode(720, 720), "frog");
 	window->setFramerateLimit(FPS);
 
 	frog = new Frog(sf::Vector2f(window->getSize().x, window->getSize().y));
 	map = new Map(*window, tickrate, *frog);
+
+	background.setTexture(*SpriteDispenser::getTexturePoiner("grass"));
+	background.setTextureRect(sf::IntRect(0, 0, 720, 720));
 }
 
 void Game::run() {
@@ -40,7 +43,8 @@ void Game::run() {
 		map->performTick(*window, tickrate, *frog);
 
 		// draw objects
-		window->clear(sf::Color(10, 30, 0));
+		window->clear();
+		window->draw(background);
 		map->draw(*window);
 		frog->draw(*window);
 		window->display();

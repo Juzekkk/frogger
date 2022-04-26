@@ -1,37 +1,33 @@
 #include "logEntity.h"
 
-LogEntity::LogEntity(sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition) :
-	MovingEntity(size, right, globalTickrate, startingPosition) {
-	shape.setFillColor(sf::Color(132, 83, 50));
+LogEntity::LogEntity(sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition) 
+	: MovingEntity(size, right, globalTickrate, startingPosition)
+{
+	// Sprite
+	sprite.setTexture(*SpriteDispenser::getTexturePoiner("log"));
+	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+	sprite.setPosition(shape.getPosition());
 }
 
-void LogEntity::move(const int globalTickrate, sf::RenderWindow& window, Frog& frog) {
+void LogEntity::move(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	if (tickrate)
 		tickrate--;
 	else {
+		bool frogOnLog = frogOnObject(window, frog);
 		if (isRight) {
-			// Move frog if frog on log
-			if (shape.getGlobalBounds().contains(
-				frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-				frog.getShape().getPosition().y + frog.getShape().getSize().y / 2))
-			{
-				frog.getShape().move(40, 0);
-			}
-			// Move log
+			if (frogOnLog)
+				frog.getShape().move(shape.getSize().y, 0);
 			shape.move(shape.getSize().y, 0);
 		}
 		else {
-			// Move frog if frog on log
-			if (shape.getGlobalBounds().contains(
-				frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-				frog.getShape().getPosition().y + frog.getShape().getSize().y / 2))
-			{
-				frog.getShape().move(-40, 0);
-			}
-			// Move log
+			if (frogOnLog)
+				frog.getShape().move(-shape.getSize().y, 0);
 			shape.move(-shape.getSize().y, 0);
 		}
-		// Reset tickrate
 		tickrate = globalTickrate;
 	}
+}
+
+void LogEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
+	move(window, globalTickrate, frog);
 }

@@ -7,9 +7,7 @@ Plane::Plane(sf::RenderWindow& window, bool right, int startingPosition) {
 }
 
 void Plane::draw(sf::RenderWindow& window) {
-	// Draw plane itself
-	window.draw(shape);
-	// Draw every moving object on plane
+	window.draw(sprite);
 	for (auto& x : movingEntities)
 		x->draw(window);
 }
@@ -18,8 +16,10 @@ sf::RectangleShape& Plane::getShape() {
 	return shape;
 }
 
-void Plane::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog){}
+void Plane::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}
 
 std::vector<MovingEntity*> Plane::getElements() {
 	return movingEntities;
 }
+
+void Plane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}

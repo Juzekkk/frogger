@@ -11,7 +11,7 @@ void Map::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) 
 	//frog within boundries check
 	if (frog.getShape().getPosition().x < -5 ||
 		frog.getShape().getPosition().x > window.getSize().x - frog.getShape().getSize().x)
-		frog.getShape().setPosition(0, window.getSize().y - frog.getShape().getSize().y);
+		frog.die(window);
 }
 
 void Map::nextLevel(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
