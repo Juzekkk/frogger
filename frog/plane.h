@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "movingEntity.h"
 #include "frog.h"
+#include <iostream>
 
 class Plane
 {
@@ -10,10 +11,12 @@ public:
 	void draw(sf::RenderWindow& window);
 	virtual void performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog);
 	sf::RectangleShape& getShape();
-	std::vector<MovingEntity*> getElements();
 
 protected:
+	std::vector<MovingEntity*> getElements();
+	virtual void moveElements(sf::RenderWindow& window, int globalTickrate, Frog& frog);
 	std::vector<MovingEntity*> movingEntities;
 	sf::RectangleShape shape;
+	sf::Sprite sprite;
 	bool isRight;
 };
