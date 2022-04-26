@@ -6,7 +6,7 @@
 #include "game.h"
 
 int main() {
-	Game game(120, 240);
+	Game game(240, 240);
 	game.run();
 	return 0;
 }

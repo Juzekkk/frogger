@@ -25,18 +25,15 @@ void RoadPlane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog&
 	for (auto& x : movingEntities) {
 		// Move car
 		x->performTick(window, globalTickrate, frog);
-		// If element flew away -> reset element position and reroll its size
 		if (x->getShape().getPosition().x > shape.getSize().x) {
-			// Size reroll
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
-			// Reposition
 			x->getShape().setPosition(shape.getPosition());
+			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
 		}
 		else if (x->getShape().getPosition().x < shape.getPosition().x) {
-			// Size reroll
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
-			// Reposition
 			x->getShape().setPosition(shape.getSize().x, shape.getPosition().y);
+			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
 		}
 	}
 }

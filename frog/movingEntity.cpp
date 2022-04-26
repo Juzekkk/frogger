@@ -21,9 +21,10 @@ sf::RectangleShape& MovingEntity::getShape() {
 void MovingEntity::move(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}
 
 bool MovingEntity::frogOnObject(sf::RenderWindow& window, Frog& frog) {
-	return (shape.getGlobalBounds().contains(
-		frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-		frog.getShape().getPosition().y + frog.getShape().getSize().y / 2));
+	if (frog.getShape().getPosition().y != shape.getPosition().y)
+		return false;
+	return shape.getGlobalBounds().intersects(frog.getShape().getGlobalBounds());
+	
 }
 
 void MovingEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}

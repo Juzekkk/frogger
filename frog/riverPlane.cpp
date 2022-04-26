@@ -17,15 +17,16 @@ RiverPlane::RiverPlane(sf::RenderWindow& window, bool right, int startingPositio
 }
 
 void RiverPlane::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
+	moveElements(window, globalTickrate, frog);
 	if (frogOnRiver(window, frog) && !frogOnLog(window, frog))
 		frog.die(window);
-	moveElements(window, globalTickrate, frog);
 }
 
 bool RiverPlane::frogOnRiver(sf::RenderWindow& window, Frog& frog) {
-	return (shape.getGlobalBounds().contains(
-		frog.getShape().getPosition().x + frog.getShape().getSize().x / 2,
-		frog.getShape().getPosition().y + frog.getShape().getSize().y / 2));
+	if (frog.getShape().getPosition().y != shape.getPosition().y)
+		return false;
+	else
+		return (shape.getGlobalBounds().intersects(frog.getShape().getGlobalBounds()));
 }
 
 bool RiverPlane::frogOnLog(sf::RenderWindow& window, Frog& frog) {
@@ -43,10 +44,12 @@ void RiverPlane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog
 		if (x->getShape().getPosition().x > shape.getSize().x) {
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
 			x->getShape().setPosition(shape.getPosition());
+			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
 		}
 		else if (x->getShape().getPosition().x < shape.getPosition().x) {
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
 			x->getShape().setPosition(shape.getSize().x, shape.getPosition().y);
+			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
 		}
 	}
 }
