@@ -16,8 +16,8 @@ Game::Game(int tick_rate, int FPS) {
 
 void Game::run() {
 	while (window->isOpen()) {
+		
 		sf::Event event;
-
 		// Handle Input
 		while (window->pollEvent(event)) {
 			if (event.type == sf::Event::Closed)
@@ -30,12 +30,11 @@ void Game::run() {
 			}
 		}
 
-		// Update the game
 
 		// End Level
 		if (frog->getShape().getPosition().y < frog->getShape().getSize().y) {
 			frog->getShape().setPosition(sf::Vector2f(0, window->getSize().y - frog->getShape().getSize().y));
-			tickrate -= 10;
+			tickrate *= 0.9;
 			map->nextLevel(*window, tickrate, *frog);
 		}
 
@@ -48,6 +47,5 @@ void Game::run() {
 		map->draw(*window);
 		frog->draw(*window);
 		window->display();
-
 	}
 }

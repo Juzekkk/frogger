@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "frog.h"
 #include "map.h"
+#include "spriteDispenser.h"
 
 class Game
 {
