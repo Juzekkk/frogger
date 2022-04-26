@@ -28,3 +28,7 @@ bool MovingEntity::frogOnObject(sf::RenderWindow& window, Frog& frog) {
 }
 
 void MovingEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}
+
+void MovingEntity::resizeTexture() {
+	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+}

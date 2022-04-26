@@ -9,6 +9,7 @@ public:
 	virtual void performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog);
 	bool frogOnObject(sf::RenderWindow& window, Frog& frog);
 	sf::RectangleShape& getShape();
+	void resizeTexture();
 
 protected:
 	virtual void move(sf::RenderWindow& window, int globalTickrate, Frog& frog);

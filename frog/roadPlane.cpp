@@ -28,12 +28,12 @@ void RoadPlane::moveElements(sf::RenderWindow& window, int globalTickrate, Frog&
 		if (x->getShape().getPosition().x > shape.getSize().x) {
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
 			x->getShape().setPosition(shape.getPosition());
-			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+			x->resizeTexture();
 		}
 		else if (x->getShape().getPosition().x < shape.getPosition().x) {
 			x->getShape().setSize(sf::Vector2f((rand() % 3 + 1) * 40, 40));
 			x->getShape().setPosition(shape.getSize().x, shape.getPosition().y);
-			sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
+			x->resizeTexture();
 		}
 	}
 }
