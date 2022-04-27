@@ -3,31 +3,32 @@
 LogEntity::LogEntity(sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition) 
 	: MovingEntity(size, right, globalTickrate, startingPosition)
 {
-	// Sprite
-	sprite.setTexture(*SpriteDispenser::getTexturePoiner("log"));
-	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
-	sprite.setPosition(shape.getPosition());
+
+	graphic.setTexture(*SpriteDispenser::getTexturePoiner("log"));
+	reloadTexture();
+}
+
+void LogEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
+	move(window, globalTickrate, frog);
 }
 
 void LogEntity::move(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	if (tickrate)
 		tickrate--;
 	else {
+		tickrate = globalTickrate;
 		bool frogOnLog = frogOnObject(window, frog);
 		if (isRight) {
+			sf::Vector2f moveVector(hitbox.getSize().y, 0);
 			if (frogOnLog)
-				frog.getShape().move(shape.getSize().y, 0);
-			shape.move(shape.getSize().y, 0);
+				frog.move(moveVector);
+			hitbox.move(moveVector);
 		}
 		else {
+			sf::Vector2f moveVector(-hitbox.getSize().y, 0);
 			if (frogOnLog)
-				frog.getShape().move(-shape.getSize().y, 0);
-			shape.move(-shape.getSize().y, 0);
+				frog.move(moveVector);
+			hitbox.move(moveVector);
 		}
-		tickrate = globalTickrate;
 	}
-}
-
-void LogEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
-	move(window, globalTickrate, frog);
 }

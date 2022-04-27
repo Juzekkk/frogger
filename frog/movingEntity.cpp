@@ -2,33 +2,38 @@
 
 MovingEntity::MovingEntity(sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition)
 {
+
 	tickrate = globalTickrate;
 	isRight = right;
-	// Hitbox
-	shape.setSize(size);
-	shape.setPosition(startingPosition);
+
+	hitbox.setSize(size);
+	hitbox.setPosition(startingPosition);
+}
+
+bool MovingEntity::frogOnObject(sf::RenderWindow& window, Frog& frog) {
+
+	if (frog.getHitbox().getPosition().y != hitbox.getPosition().y)
+		return false;
+	return hitbox.getGlobalBounds().intersects(frog.getHitbox().getGlobalBounds());
+}
+
+void MovingEntity::reloadTexture() {
+
+	graphic.setTextureRect(sf::IntRect(hitbox.getPosition().x, hitbox.getPosition().y, hitbox.getSize().x, hitbox.getSize().y));
+}
+
+sf::RectangleShape& MovingEntity::getHitbox() {
+
+	return hitbox;
 }
 
 void MovingEntity::draw(sf::RenderWindow& window) {
-	sprite.setPosition(shape.getPosition());
-	window.draw(sprite);
+
+	graphic.setPosition(hitbox.getPosition());
+	window.draw(graphic);
 }
 
-sf::RectangleShape& MovingEntity::getShape() {
-	return shape;
-}
 
 void MovingEntity::move(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}
 
-bool MovingEntity::frogOnObject(sf::RenderWindow& window, Frog& frog) {
-	if (frog.getShape().getPosition().y != shape.getPosition().y)
-		return false;
-	return shape.getGlobalBounds().intersects(frog.getShape().getGlobalBounds());
-	
-}
-
 void MovingEntity::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {}
-
-void MovingEntity::resizeTexture() {
-	sprite.setTextureRect(sf::IntRect(shape.getPosition().x, shape.getPosition().y, shape.getSize().x, shape.getSize().y));
-}
