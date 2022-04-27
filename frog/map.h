@@ -8,6 +8,7 @@ class Map
 {
 public:
 	Map(sf::RenderWindow& window, int globalTickrate, Frog& frog);
+	~Map();
 	void nextLevel(sf::RenderWindow& window, int globalTickrate, Frog& frog);
 	void performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog);
 	void draw(sf::RenderWindow& window);

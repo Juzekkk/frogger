@@ -4,6 +4,11 @@ Map::Map(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	nextLevel(window, globalTickrate, frog);
 }
 
+Map::~Map(){
+	for (auto& x : planes)
+		delete x;
+}
+
 void Map::nextLevel(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	for (auto& x : planes) {
 		delete x;
