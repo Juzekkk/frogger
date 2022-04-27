@@ -8,9 +8,11 @@ class Game
 {
 public:
 	Game(int tick_rate, int FPS);
+	~Game();
 	void run();
 private:
 	bool frogOnMeta();
+
 	int tickrate;
 	sf::RenderWindow* window;
 	Frog* frog;

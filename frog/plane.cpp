@@ -7,6 +7,11 @@ Plane::Plane(sf::RenderWindow& window, bool right, int startingPosition) {
 	hitbox.setPosition(sf::Vector2f(-3 * 40, startingPosition * 40));
 }
 
+Plane::~Plane() {
+	for (auto& x : movingEntities)
+		delete x;
+}
+
 sf::RectangleShape& Plane::getHitbox() {
 
 	return hitbox;
@@ -27,3 +32,4 @@ std::vector<MovingEntity*> Plane::getElements() {
 
 	return movingEntities;
 }
+

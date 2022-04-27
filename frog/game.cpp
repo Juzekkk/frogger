@@ -17,6 +17,12 @@ Game::Game(int tick_rate, int FPS) {
 	background.setTextureRect(sf::IntRect(0, 0, 720, 720));
 }
 
+Game::~Game() {
+	delete window;
+	delete frog;
+	delete map;
+}
+
 void Game::run() {
 	while (window->isOpen()) {
 		
