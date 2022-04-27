@@ -4,16 +4,6 @@ Map::Map(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	nextLevel(window, globalTickrate, frog);
 }
 
-void Map::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
-	for (auto& x : planes)
-		x->performTick(window, globalTickrate, frog);
-
-	//frog within boundries check
-	if (frog.getShape().getPosition().x < -5 ||
-		frog.getShape().getPosition().x > window.getSize().x - frog.getShape().getSize().x)
-		frog.die(window);
-}
-
 void Map::nextLevel(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 	for (auto& x : planes) {
 		delete x;
@@ -30,6 +20,16 @@ void Map::nextLevel(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
 			planes.push_back(temp1);
 		}
 	}
+}
+
+void Map::performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog) {
+
+	for (auto& x : planes)
+		x->performTick(window, globalTickrate, frog);
+
+	if (frog.getHitbox().getPosition().x < -5 ||
+		frog.getHitbox().getPosition().x > window.getSize().x - frog.getHitbox().getSize().x)
+		frog.die(window);
 }
 
 void Map::draw(sf::RenderWindow& window) {

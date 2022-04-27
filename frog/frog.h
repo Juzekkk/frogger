@@ -5,13 +5,13 @@ class Frog
 {
 public:
 	Frog(sf::Vector2f windowSize);
-	void draw(sf::RenderWindow& window);
 	void move(sf::RenderWindow& window);
+	void move(sf::Vector2f vector);
 	void die(sf::RenderWindow& window);
-	sf::RectangleShape& getShape();
-
+	sf::RectangleShape& getHitbox();
+	void draw(sf::RenderWindow& window);
 private:
-	sf::RectangleShape frog;
-	sf::Sprite sprite;
+	sf::RectangleShape hitbox;
+	sf::Sprite graphic;
 };
 

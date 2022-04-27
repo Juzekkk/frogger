@@ -10,6 +10,7 @@ public:
 	Game(int tick_rate, int FPS);
 	void run();
 private:
+	bool frogOnMeta();
 	int tickrate;
 	sf::RenderWindow* window;
 	Frog* frog;

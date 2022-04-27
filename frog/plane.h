@@ -8,15 +8,15 @@ class Plane
 {
 public:
 	Plane(sf::RenderWindow& window, bool right, int positionY);
+	sf::RectangleShape& getHitbox();
 	void draw(sf::RenderWindow& window);
 	virtual void performTick(sf::RenderWindow& window, int globalTickrate, Frog& frog);
-	sf::RectangleShape& getShape();
 
 protected:
-	std::vector<MovingEntity*> getElements();
 	virtual void moveElements(sf::RenderWindow& window, int globalTickrate, Frog& frog);
-	std::vector<MovingEntity*> movingEntities;
-	sf::RectangleShape shape;
-	sf::Sprite sprite;
+	std::vector<MovingEntity*> getElements();
 	bool isRight;
+	std::vector<MovingEntity*> movingEntities;
+	sf::RectangleShape hitbox;
+	sf::Sprite graphic;
 };
