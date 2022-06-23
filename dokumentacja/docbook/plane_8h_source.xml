@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_plane_8h_source" xml:lang="pl">
+<title>plane.h</title>
+<indexterm><primary>frog/plane.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;movingEntity.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;frog.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+6 
+13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_plane">Plane</link>
+14 {
+15 <emphasis role="keyword">public</emphasis>:
+22 &#32;&#32;&#32;&#32;<link linkend="_class_plane_1af47c8299c251ecaa1a586951bb61c727">Plane</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;right,&#32;<emphasis role="keywordtype">int</emphasis>&#32;positionY);
+27 &#32;&#32;&#32;&#32;<link linkend="_class_plane_1a69abd86051c880dcb44b249ad10c4436">~Plane</link>();
+31 &#32;&#32;&#32;&#32;sf::RectangleShape&amp;&#32;<link linkend="_class_plane_1a0fef7e6258721cbcb3c735d3cfaf3b61">getHitbox</link>();
+36 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_plane_1acc3e5d39e5b99c804d746a8e6b421620">draw</link>(sf::RenderWindow&amp;&#32;window);
+40 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_plane_1a6f72d4caab756edd3a46e8eb84ed3ae4">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+41 
+42 <emphasis role="keyword">protected</emphasis>:
+46 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_plane_1a2dd645c2d4cd7bdf1df539c32d41aa67">moveElements</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+50 &#32;&#32;&#32;&#32;std::vector&lt;MovingEntity*&gt;&#32;<link linkend="_class_plane_1a14f566595fd686d938dcc650b2833961">getElements</link>();
+51 &#32;&#32;&#32;&#32;
+52 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isRight;
+53 &#32;&#32;&#32;&#32;std::vector&lt;MovingEntity*&gt;&#32;movingEntities;
+54 &#32;&#32;&#32;&#32;sf::RectangleShape&#32;hitbox;
+55 &#32;&#32;&#32;&#32;sf::Sprite&#32;graphic;
+56 };
+</programlisting></section>

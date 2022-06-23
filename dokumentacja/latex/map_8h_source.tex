@@ -1,0 +1,25 @@
+\doxysection{map.\+h}
+\label{map_8h_source}\index{frog/map.h@{frog/map.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}plane.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}roadPlane.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}riverPlane.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }Map}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     Map(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{28     \string~Map();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} nextLevel(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} performTick(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} draw(sf::RenderWindow\& window);}
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49     std::vector<Plane*> planes;}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+
+\end{DoxyCode}

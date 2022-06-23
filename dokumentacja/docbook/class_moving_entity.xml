@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_moving_entity" xml:lang="pl">
+<title>Dokumentacja klasy MovingEntity</title>
+<indexterm><primary>MovingEntity</primary></indexterm>
+<para>
+
+<para><link linkend="_class_moving_entity">MovingEntity</link> Class. Klasa definiująca bazową ruchomą jednostkę. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;movingEntity.h&gt;</computeroutput>
+</para>
+<para>Diagram dziedziczenia dla MovingEntity    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_moving_entity.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_moving_entity_1a6bc306db4c769c8a4f691e57b4cf2e5b">MovingEntity</link> (sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition)</para>
+
+<para>Konstruktor klasy <link linkend="_class_moving_entity">MovingEntity</link>. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_moving_entity_1ae2e2f476f3490168b909615ac71a5a25">frogOnObject</link> (sf::RenderWindow &amp;window, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda zwracająca wartość logiczną mówiącą o tym, czy gracz znajduje się na jednostce. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_moving_entity_1aa00f63cf9615b282db02119fb917b947"/>void <emphasis role="strong">reloadTexture</emphasis> ()</para>
+
+<para>Metoda odpowiadająca za adaptację rozmiarów i pozycji tekstury do hitboxa. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_moving_entity_1a5e5cf69e98f054b8291ea87ba158dfbe"/>sf::RectangleShape &amp; <emphasis role="strong">getHitbox</emphasis> ()</para>
+
+<para>Metoda zwracająca referencję do hitboxa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_moving_entity_1ae3caae68a2ea2a8e355c1b1a1f720f85">draw</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda wyświetlająca jednostkę w oknie. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_moving_entity_1a59cd99294f16f67402016cfd85a526bd">performTick</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda wirtualna. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Metody chronione    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_moving_entity_1af04f26f911efccd0469a951aa237a356"/>virtual void <emphasis role="strong">move</emphasis> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda wirtualna. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atrybuty chronione    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_moving_entity_1a7812e3245ef6296faf79f8f5fb573a13"/>bool <emphasis role="strong">isRight</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_moving_entity_1aebb66e230d6b3caf1a27d42cfc3e6f19"/>int <emphasis role="strong">tickrate</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_moving_entity_1a97cd4cf7c11e44bd09c6e881007cc589"/>sf::RectangleShape <emphasis role="strong">hitbox</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_moving_entity_1a7d8d96dea28a18c1e0ca846217b142bb"/>sf::Sprite <emphasis role="strong">graphic</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_moving_entity">MovingEntity</link> Class. Klasa definiująca bazową ruchomą jednostkę. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_moving_entity_1a6bc306db4c769c8a4f691e57b4cf2e5b"/><section>
+    <title>MovingEntity()</title>
+<indexterm><primary>MovingEntity</primary><secondary>MovingEntity</secondary></indexterm>
+<indexterm><primary>MovingEntity</primary><secondary>MovingEntity</secondary></indexterm>
+<para><computeroutput>MovingEntity::MovingEntity (sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_moving_entity">MovingEntity</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>wektor określający rozmar jednostki. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>right</entry><entry>
+<para>wartość logiczna określająca kierunek ruchu jednostki. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>startingPosition</entry><entry>
+<para>pozycja startowa jednostki. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_moving_entity_1ae3caae68a2ea2a8e355c1b1a1f720f85"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>MovingEntity</secondary></indexterm>
+<indexterm><primary>MovingEntity</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void MovingEntity::draw (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda wyświetlająca jednostkę w oknie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_moving_entity_1ae2e2f476f3490168b909615ac71a5a25"/><section>
+    <title>frogOnObject()</title>
+<indexterm><primary>frogOnObject</primary><secondary>MovingEntity</secondary></indexterm>
+<indexterm><primary>MovingEntity</primary><secondary>frogOnObject</secondary></indexterm>
+<para><computeroutput>bool MovingEntity::frogOnObject (sf::RenderWindow &amp; window, <link linkend="_class_frog">Frog</link> &amp; frog)</computeroutput></para><para>
+
+<para>Metoda zwracająca wartość logiczną mówiącą o tym, czy gracz znajduje się na jednostce. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_moving_entity_1a59cd99294f16f67402016cfd85a526bd"/><section>
+    <title>performTick()</title>
+<indexterm><primary>performTick</primary><secondary>MovingEntity</secondary></indexterm>
+<indexterm><primary>MovingEntity</primary><secondary>performTick</secondary></indexterm>
+<para><computeroutput>void MovingEntity::performTick (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Metoda wirtualna. </para>
+</para>
+<para>
+Reimplementowana w <link linkend="_class_car_entity_1a03ca22a1e7f6a250a9001b026ea72345">CarEntity</link> i <link linkend="_class_log_entity_1a0e58cf2ab8cde04cf7d408bebdef4916">LogEntity</link>.</para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/movingEntity.hfrog/movingEntity.cpp</section>
+</section>

@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja klasy Car\+Entity}
+\label{class_car_entity}\index{CarEntity@{CarEntity}}
+
+
+\doxyref{Car\+Entity}{str.}{class_car_entity} Class. Klasa dziedziczy po klasie moving\+Entity. Klasa definiująca jednostkę samochodu. Samochód jest elementem, który zabija gracza jeśli na niego wkroczy.  
+
+
+
+
+{\ttfamily \#include $<$car\+Entity.\+h$>$}
+
+Diagram dziedziczenia dla Car\+Entity\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_car_entity}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Car\+Entity} (sf\+::\+Vector2f size, bool right, int global\+Tickrate, sf\+::\+Vector2f starting\+Position)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Car\+Entity}{str.}{class_car_entity}. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Car\+Entity}{str.}{class_car_entity} Class. Klasa dziedziczy po klasie moving\+Entity. Klasa definiująca jednostkę samochodu. Samochód jest elementem, który zabija gracza jeśli na niego wkroczy. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_car_entity_aac9e7877c18f8629b8941bf4ac31cdc4}} 
+\index{CarEntity@{CarEntity}!CarEntity@{CarEntity}}
+\index{CarEntity@{CarEntity}!CarEntity@{CarEntity}}
+\doxysubsubsection{CarEntity()}
+{\footnotesize\ttfamily Car\+Entity\+::\+Car\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{size,  }\item[{bool}]{right,  }\item[{int}]{global\+Tickrate,  }\item[{sf\+::\+Vector2f}]{starting\+Position }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Car\+Entity}{str.}{class_car_entity}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size} & wektor określający rozmar jednostki. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostki. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em starting\+Position} & pozycja startowa jednostki. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_car_entity_a03ca22a1e7f6a250a9001b026ea72345}} 
+\index{CarEntity@{CarEntity}!performTick@{performTick}}
+\index{performTick@{performTick}!CarEntity@{CarEntity}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Car\+Entity\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \textbf{ Moving\+Entity} \doxyref{}{str.}{class_moving_entity_a59cd99294f16f67402016cfd85a526bd}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/car\+Entity.\+h\item 
+frog/car\+Entity.\+cpp\end{DoxyCompactItemize}

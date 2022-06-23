@@ -1,0 +1,28 @@
+\doxysection{game.\+h}
+\label{game_8h_source}\index{frog/game.h@{frog/game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}frog.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}map.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}spriteDispenser.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }Game}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     Game(\textcolor{keywordtype}{int} tick\_rate, \textcolor{keywordtype}{int} FPS);}
+\DoxyCodeLine{28     \string~Game();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} frogOnMeta();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} tickrate;}
+\DoxyCodeLine{41     sf::RenderWindow* window;}
+\DoxyCodeLine{42     Frog* frog;}
+\DoxyCodeLine{43     Map* map;}
+\DoxyCodeLine{44     sf::Sprite background;}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+
+\end{DoxyCode}

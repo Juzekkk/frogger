@@ -1,0 +1,28 @@
+\doxysection{moving\+Entity.\+h}
+\label{moving_entity_8h_source}\index{frog/movingEntity.h@{frog/movingEntity.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}frog.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }MovingEntity}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     MovingEntity(sf::Vector2f size, \textcolor{keywordtype}{bool} right, \textcolor{keywordtype}{int} globalTickrate, sf::Vector2f startingPosition);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} frogOnObject(sf::RenderWindow\& window, Frog\& frog);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} reloadTexture();}
+\DoxyCodeLine{30     sf::RectangleShape\& getHitbox();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} draw(sf::RenderWindow\& window);}
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} performTick(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{39 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} move(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} isRight;}
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} tickrate;}
+\DoxyCodeLine{47     sf::RectangleShape hitbox;}
+\DoxyCodeLine{48     sf::Sprite graphic;}
+\DoxyCodeLine{49 \};}
+
+\end{DoxyCode}

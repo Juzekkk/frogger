@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_resource_8h_source" xml:lang="pl">
+<title>resource.h</title>
+<indexterm><primary>frog/resource.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//{{NO_DEPENDENCIES}}</emphasis>
+2 <emphasis role="comment">//&#32;Microsoft&#32;Visual&#32;C++&#32;generated&#32;include&#32;file.</emphasis>
+3 <emphasis role="comment">//&#32;Used&#32;by&#32;frog.rc</emphasis>
+4 
+5 <emphasis role="comment">//&#32;Następne&#32;wartości&#32;domyślne&#32;dla&#32;nowych&#32;obiektów</emphasis>
+6 <emphasis role="comment">//&#32;</emphasis>
+7 <emphasis role="preprocessor">#ifdef&#32;APSTUDIO_INVOKED</emphasis>
+8 <emphasis role="preprocessor">#ifndef&#32;APSTUDIO_READONLY_SYMBOLS</emphasis>
+9 <emphasis role="preprocessor">#define&#32;_APS_NEXT_RESOURCE_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;101</emphasis>
+10 <emphasis role="preprocessor">#define&#32;_APS_NEXT_COMMAND_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;40001</emphasis>
+11 <emphasis role="preprocessor">#define&#32;_APS_NEXT_CONTROL_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1001</emphasis>
+12 <emphasis role="preprocessor">#define&#32;_APS_NEXT_SYMED_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;101</emphasis>
+13 <emphasis role="preprocessor">#endif</emphasis>
+14 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

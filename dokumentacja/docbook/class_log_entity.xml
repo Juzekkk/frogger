@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_log_entity" xml:lang="pl">
+<title>Dokumentacja klasy LogEntity</title>
+<indexterm><primary>LogEntity</primary></indexterm>
+<para>
+
+<para><link linkend="_class_log_entity">LogEntity</link> Class. Klasa dziedziczy po klasie movingEntity. Klasa definiująca jednostkę kłody. Kłoda jest elementem, który przemieszcza gracza, jeśli się na niej znajduje. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;logEntity.h&gt;</computeroutput>
+</para>
+<para>Diagram dziedziczenia dla LogEntity    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_log_entity.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_log_entity_1a0775b67cf4f0786be53521823fa88b92">LogEntity</link> (sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition)</para>
+
+<para>Konstruktor klasy <link linkend="_class_log_entity">LogEntity</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_log_entity_1a0e58cf2ab8cde04cf7d408bebdef4916">performTick</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Dodatkowe Dziedziczone Składowe    </title>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_log_entity">LogEntity</link> Class. Klasa dziedziczy po klasie movingEntity. Klasa definiująca jednostkę kłody. Kłoda jest elementem, który przemieszcza gracza, jeśli się na niej znajduje. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_log_entity_1a0775b67cf4f0786be53521823fa88b92"/><section>
+    <title>LogEntity()</title>
+<indexterm><primary>LogEntity</primary><secondary>LogEntity</secondary></indexterm>
+<indexterm><primary>LogEntity</primary><secondary>LogEntity</secondary></indexterm>
+<para><computeroutput>LogEntity::LogEntity (sf::Vector2f size, bool right, int globalTickrate, sf::Vector2f startingPosition)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_log_entity">LogEntity</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>wektor określający rozmar jednostki. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>right</entry><entry>
+<para>wartość logiczna określająca kierunek ruchu jednostki. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>startingPosition</entry><entry>
+<para>pozycja startowa jednostki. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_log_entity_1a0e58cf2ab8cde04cf7d408bebdef4916"/><section>
+    <title>performTick()</title>
+<indexterm><primary>performTick</primary><secondary>LogEntity</secondary></indexterm>
+<indexterm><primary>LogEntity</primary><secondary>performTick</secondary></indexterm>
+<para><computeroutput>void LogEntity::performTick (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplementowana z <link linkend="_class_moving_entity_1a59cd99294f16f67402016cfd85a526bd">MovingEntity</link>.</para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/logEntity.hfrog/logEntity.cpp</section>
+</section>

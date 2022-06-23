@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja klasy Log\+Entity}
+\label{class_log_entity}\index{LogEntity@{LogEntity}}
+
+
+\doxyref{Log\+Entity}{str.}{class_log_entity} Class. Klasa dziedziczy po klasie moving\+Entity. Klasa definiująca jednostkę kłody. Kłoda jest elementem, który przemieszcza gracza, jeśli się na niej znajduje.  
+
+
+
+
+{\ttfamily \#include $<$log\+Entity.\+h$>$}
+
+Diagram dziedziczenia dla Log\+Entity\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_log_entity}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Log\+Entity} (sf\+::\+Vector2f size, bool right, int global\+Tickrate, sf\+::\+Vector2f starting\+Position)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Log\+Entity}{str.}{class_log_entity}. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Log\+Entity}{str.}{class_log_entity} Class. Klasa dziedziczy po klasie moving\+Entity. Klasa definiująca jednostkę kłody. Kłoda jest elementem, który przemieszcza gracza, jeśli się na niej znajduje. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_log_entity_a0775b67cf4f0786be53521823fa88b92}} 
+\index{LogEntity@{LogEntity}!LogEntity@{LogEntity}}
+\index{LogEntity@{LogEntity}!LogEntity@{LogEntity}}
+\doxysubsubsection{LogEntity()}
+{\footnotesize\ttfamily Log\+Entity\+::\+Log\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{size,  }\item[{bool}]{right,  }\item[{int}]{global\+Tickrate,  }\item[{sf\+::\+Vector2f}]{starting\+Position }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Log\+Entity}{str.}{class_log_entity}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size} & wektor określający rozmar jednostki. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostki. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em starting\+Position} & pozycja startowa jednostki. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_log_entity_a0e58cf2ab8cde04cf7d408bebdef4916}} 
+\index{LogEntity@{LogEntity}!performTick@{performTick}}
+\index{performTick@{performTick}!LogEntity@{LogEntity}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Log\+Entity\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla jednostki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \textbf{ Moving\+Entity} \doxyref{}{str.}{class_moving_entity_a59cd99294f16f67402016cfd85a526bd}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/log\+Entity.\+h\item 
+frog/log\+Entity.\+cpp\end{DoxyCompactItemize}

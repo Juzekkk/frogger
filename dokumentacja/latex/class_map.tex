@@ -1,0 +1,112 @@
+\doxysection{Dokumentacja klasy Map}
+\label{class_map}\index{Map@{Map}}
+
+
+\doxyref{Map}{str.}{class_map} Class. Klasa zawierająca w sobie wszystkie jednostki na mapie. Odpowiada za przechowywania elementów otoczenia oraz wszystkich ruchomych jednostek w grze, w tym jednostki gracza.  
+
+
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Map} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Map}{str.}{class_map}. \end{DoxyCompactList}\item 
+\mbox{\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+{\bfseries $\sim$\+Map} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Map}{str.}{class_map}. Destruktor biorący pod uwagę niszczenie nie tylko wskaźników do obiektów, ale również samych obiektów. \end{DoxyCompactList}\item 
+void \textbf{ next\+Level} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za stworzenie nowo, losowo wygenerowanej mapy. \end{DoxyCompactList}\item 
+void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na mapie. \end{DoxyCompactList}\item 
+void \textbf{ draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za narysowanie mapy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Map}{str.}{class_map} Class. Klasa zawierająca w sobie wszystkie jednostki na mapie. Odpowiada za przechowywania elementów otoczenia oraz wszystkich ruchomych jednostek w grze, w tym jednostki gracza. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_map_a76f8de6b0e0155e7b47bd3e9dbd73dbe}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{Map()}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Map}{str.}{class_map}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_map_ab9e768d51062f069be46203e4e06643e}} 
+\index{Map@{Map}!draw@{draw}}
+\index{draw@{draw}!Map@{Map}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Map\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za narysowanie mapy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_map_a2a23d2e359c6fefd916380304ffb0b72}} 
+\index{Map@{Map}!nextLevel@{nextLevel}}
+\index{nextLevel@{nextLevel}!Map@{Map}}
+\doxysubsubsection{nextLevel()}
+{\footnotesize\ttfamily void Map\+::next\+Level (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za stworzenie nowo, losowo wygenerowanej mapy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_map_aab0d6fb11fc29732162390c37004e256}} 
+\index{Map@{Map}!performTick@{performTick}}
+\index{performTick@{performTick}!Map@{Map}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Map\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na mapie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/map.\+h\item 
+frog/map.\+cpp\end{DoxyCompactItemize}

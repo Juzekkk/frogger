@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sprite_dispenser_8h_source" xml:lang="pl">
+<title>spriteDispenser.h</title>
+<indexterm><primary>frog/spriteDispenser.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+4 
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sprite_dispenser">SpriteDispenser</link>
+10 {
+11 <emphasis role="keyword">public</emphasis>:
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;sf::Texture*&#32;<link linkend="_class_sprite_dispenser_1a18ac958d6a31dae960d2cd092bd32ad6">getTexturePoiner</link>(std::string&#32;type);
+17 <emphasis role="keyword">private</emphasis>:
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::map&lt;std::string,&#32;sf::Texture*&gt;&#32;textures;
+19 };
+</programlisting></section>

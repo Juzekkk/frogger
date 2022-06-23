@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log_entity_8h_source" xml:lang="pl">
+<title>logEntity.h</title>
+<indexterm><primary>frog/logEntity.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;movingEntity.h&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;spriteDispenser.h&quot;</emphasis>
+4 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_log_entity">LogEntity</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_moving_entity">MovingEntity</link>
+12 {
+13 <emphasis role="keyword">public</emphasis>:
+20 &#32;&#32;&#32;&#32;<link linkend="_class_log_entity_1a0775b67cf4f0786be53521823fa88b92">LogEntity</link>&#32;(sf::Vector2f&#32;size,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;right,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;sf::Vector2f&#32;startingPosition);
+27 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_log_entity_1a0e58cf2ab8cde04cf7d408bebdef4916">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+28 <emphasis role="keyword">private</emphasis>:
+35 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;move(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+36 };
+37 
+</programlisting></section>

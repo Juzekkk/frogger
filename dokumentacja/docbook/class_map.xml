@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_map" xml:lang="pl">
+<title>Dokumentacja klasy Map</title>
+<indexterm><primary>Map</primary></indexterm>
+<para>
+
+<para><link linkend="_class_map">Map</link> Class. Klasa zawierająca w sobie wszystkie jednostki na mapie. Odpowiada za przechowywania elementów otoczenia oraz wszystkich ruchomych jednostek w grze, w tym jednostki gracza. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;map.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_map_1a76f8de6b0e0155e7b47bd3e9dbd73dbe">Map</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Konstruktor klasy <link linkend="_class_map">Map</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_map_1aa403fbe09394ccf39747588f5168e3b2"/><emphasis role="strong">~Map</emphasis> ()</para>
+
+<para>Destruktor klasy <link linkend="_class_map">Map</link>. Destruktor biorący pod uwagę niszczenie nie tylko wskaźników do obiektów, ale również samych obiektów. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_map_1a2a23d2e359c6fefd916380304ffb0b72">nextLevel</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda odpowiadająca za stworzenie nowo, losowo wygenerowanej mapy. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_map_1aab0d6fb11fc29732162390c37004e256">performTick</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na mapie. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_map_1ab9e768d51062f069be46203e4e06643e">draw</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda odpowiadająca za narysowanie mapy. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_map">Map</link> Class. Klasa zawierająca w sobie wszystkie jednostki na mapie. Odpowiada za przechowywania elementów otoczenia oraz wszystkich ruchomych jednostek w grze, w tym jednostki gracza. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_map_1a76f8de6b0e0155e7b47bd3e9dbd73dbe"/><section>
+    <title>Map()</title>
+<indexterm><primary>Map</primary><secondary>Map</secondary></indexterm>
+<indexterm><primary>Map</primary><secondary>Map</secondary></indexterm>
+<para><computeroutput>Map::Map (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_map">Map</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_map_1ab9e768d51062f069be46203e4e06643e"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>Map</secondary></indexterm>
+<indexterm><primary>Map</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void Map::draw (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda odpowiadająca za narysowanie mapy. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_map_1a2a23d2e359c6fefd916380304ffb0b72"/><section>
+    <title>nextLevel()</title>
+<indexterm><primary>nextLevel</primary><secondary>Map</secondary></indexterm>
+<indexterm><primary>Map</primary><secondary>nextLevel</secondary></indexterm>
+<para><computeroutput>void Map::nextLevel (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)</computeroutput></para><para>
+
+<para>Metoda odpowiadająca za stworzenie nowo, losowo wygenerowanej mapy. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_map_1aab0d6fb11fc29732162390c37004e256"/><section>
+    <title>performTick()</title>
+<indexterm><primary>performTick</primary><secondary>Map</secondary></indexterm>
+<indexterm><primary>Map</primary><secondary>performTick</secondary></indexterm>
+<para><computeroutput>void Map::performTick (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)</computeroutput></para><para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na mapie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/map.hfrog/map.cpp</section>
+</section>

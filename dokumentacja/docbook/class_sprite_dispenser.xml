@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sprite_dispenser" xml:lang="pl">
+<title>Dokumentacja klasy SpriteDispenser</title>
+<indexterm><primary>SpriteDispenser</primary></indexterm>
+<para>
+
+<para><link linkend="_class_sprite_dispenser">SpriteDispenser</link> Class. Klasa odpowiedzialna za dystrybucję tekstur jednostkom w grze. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;spriteDispenser.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Statyczne metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para>static sf::Texture * <link linkend="_class_sprite_dispenser_1a18ac958d6a31dae960d2cd092bd32ad6">getTexturePoiner</link> (std::string type)</para>
+
+<para>Statyczna metoda zwracająca pointer do tekstury danego typu. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_sprite_dispenser">SpriteDispenser</link> Class. Klasa odpowiedzialna za dystrybucję tekstur jednostkom w grze. </para>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_sprite_dispenser_1a18ac958d6a31dae960d2cd092bd32ad6"/><section>
+    <title>getTexturePoiner()</title>
+<indexterm><primary>getTexturePoiner</primary><secondary>SpriteDispenser</secondary></indexterm>
+<indexterm><primary>SpriteDispenser</primary><secondary>getTexturePoiner</secondary></indexterm>
+<para><computeroutput>sf::Texture * SpriteDispenser::getTexturePoiner (std::string type)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Statyczna metoda zwracająca pointer do tekstury danego typu. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>type</entry><entry>
+<para>określa typ tekstury która jest zwracana. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/spriteDispenser.hfrog/spriteDispenser.cpp</section>
+</section>

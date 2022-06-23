@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja klasy River\+Plane}
+\label{class_river_plane}\index{RiverPlane@{RiverPlane}}
+
+
+\doxyref{River\+Plane}{str.}{class_river_plane} Class. Klasa dziędzicząca po klasie \doxyref{Plane}{str.}{class_plane}. Specjalny typ płaszczyzny po której pływają kłody. Płaszczyzna ta zabija gracza, jeśli nie znajduje się on na żadnej z kłód.  
+
+
+
+
+{\ttfamily \#include $<$river\+Plane.\+h$>$}
+
+Diagram dziedziczenia dla River\+Plane\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_river_plane}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ River\+Plane} (sf\+::\+Render\+Window \&window, bool right, int starting\+Position, int global\+Tickrate)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{River\+Plane}{str.}{class_river_plane}. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{River\+Plane}{str.}{class_river_plane} Class. Klasa dziędzicząca po klasie \doxyref{Plane}{str.}{class_plane}. Specjalny typ płaszczyzny po której pływają kłody. Płaszczyzna ta zabija gracza, jeśli nie znajduje się on na żadnej z kłód. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_river_plane_af5c7f15dd37528d99ff9cd7121189301}} 
+\index{RiverPlane@{RiverPlane}!RiverPlane@{RiverPlane}}
+\index{RiverPlane@{RiverPlane}!RiverPlane@{RiverPlane}}
+\doxysubsubsection{RiverPlane()}
+{\footnotesize\ttfamily River\+Plane\+::\+River\+Plane (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{bool}]{right,  }\item[{int}]{starting\+Position,  }\item[{int}]{global\+Tickrate }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{River\+Plane}{str.}{class_river_plane}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostek. \\
+\hline
+{\em starting\+Position} & pozycja startowa płaszczyzny. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_river_plane_a0d72f0b308522b189b3ac1542d21fa42}} 
+\index{RiverPlane@{RiverPlane}!performTick@{performTick}}
+\index{performTick@{performTick}!RiverPlane@{RiverPlane}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void River\+Plane\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \textbf{ Plane} \doxyref{}{str.}{class_plane_a6f72d4caab756edd3a46e8eb84ed3ae4}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/river\+Plane.\+h\item 
+frog/river\+Plane.\+cpp\end{DoxyCompactItemize}

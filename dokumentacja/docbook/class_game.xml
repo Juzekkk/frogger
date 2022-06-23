@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game" xml:lang="pl">
+<title>Dokumentacja klasy Game</title>
+<indexterm><primary>Game</primary></indexterm>
+<para>
+
+<para><link linkend="_class_game">Game</link> class. Główna klasa wykonawcza aplikacji. Jest odpowiedzialna za za inicjację mapy, jednostki gracza oraz przechowywania globalnych ustawień obejmujących całą aplikację - wymiarów okna, tickrate&apos;u, liczny FPSów i grafiki tła. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;game.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_game_1a63a1ce9f52dbbcc310def23d86755d60">Game</link> (int tick_rate, int FPS)</para>
+
+<para>Konstruktor klasy <link linkend="_class_game">Game</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_1ae3d112ca6e0e55150d2fdbc704474530"/><emphasis role="strong">~Game</emphasis> ()</para>
+
+<para>Destruktor klasy <link linkend="_class_game">Game</link>. Destruktor biorący pod uwagę usunięcie obiektów, a nie tylko wskaźników do nich. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_1a1ab78f5ed0d5ea879157357cf2fb2afa"/>void <emphasis role="strong">run</emphasis> ()</para>
+
+<para>Metoda uruchamiająca grę. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_game">Game</link> class. Główna klasa wykonawcza aplikacji. Jest odpowiedzialna za za inicjację mapy, jednostki gracza oraz przechowywania globalnych ustawień obejmujących całą aplikację - wymiarów okna, tickrate&apos;u, liczny FPSów i grafiki tła. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_game_1a63a1ce9f52dbbcc310def23d86755d60"/><section>
+    <title>Game()</title>
+<indexterm><primary>Game</primary><secondary>Game</secondary></indexterm>
+<indexterm><primary>Game</primary><secondary>Game</secondary></indexterm>
+<para><computeroutput>Game::Game (int tick_rate, int FPS)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_game">Game</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tick_rate</entry><entry>
+<para>odpowia za szybkość wykonywania się kolejnych ticków gry. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>FPS</entry><entry>
+<para>liczba klatek na sekundę gry. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/game.hfrog/game.cpp</section>
+</section>

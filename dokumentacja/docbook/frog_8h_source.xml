@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_frog_8h_source" xml:lang="pl">
+<title>frog.h</title>
+<indexterm><primary>frog/frog.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;spriteDispenser.h&quot;</emphasis>
+4 
+12 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_frog">Frog</link>
+13 {
+14 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;<link linkend="_class_frog_1a61c74181216368ed1de1a9dd015f07fe">Frog</link>(sf::Vector2f&#32;windowSize);
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_frog_1a983b92db61de57a4a27c55966dc2652d">move</link>(sf::RenderWindow&amp;&#32;window);
+29 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_frog_1a983b92db61de57a4a27c55966dc2652d">move</link>(sf::Vector2f&#32;vector);
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_frog_1a0aefa33db680fc12068c5c10bff5a8cc">die</link>(sf::RenderWindow&amp;&#32;window);
+35 &#32;&#32;&#32;&#32;sf::RectangleShape&amp;&#32;getHitbox();
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_frog_1aed0c203b0407b63cc22cc39571b8e2b7">draw</link>(sf::RenderWindow&amp;&#32;window);
+41 <emphasis role="keyword">private</emphasis>:
+42 &#32;&#32;&#32;&#32;sf::RectangleShape&#32;hitbox;
+43 &#32;&#32;&#32;&#32;sf::Sprite&#32;graphic;
+44 };
+45 
+</programlisting></section>

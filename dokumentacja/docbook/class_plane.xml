@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_plane" xml:lang="pl">
+<title>Dokumentacja klasy Plane</title>
+<indexterm><primary>Plane</primary></indexterm>
+<para>
+
+<para><link linkend="_class_plane">Plane</link> Class. Klasa definiująca podstawową płaszczyznę w grze. Płaszczyzna zawiera w sobie również mechanizm tworzenia ruchomych jednostek oraz wywołuje ich ruch. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;plane.h&gt;</computeroutput>
+</para>
+<para>Diagram dziedziczenia dla Plane    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_plane.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_plane_1af47c8299c251ecaa1a586951bb61c727">Plane</link> (sf::RenderWindow &amp;window, bool right, int positionY)</para>
+
+<para>Konstruktor klasy <link linkend="_class_plane">Plane</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1a69abd86051c880dcb44b249ad10c4436"/><emphasis role="strong">~Plane</emphasis> ()</para>
+
+<para>Destruktor klasy <link linkend="_class_plane">Plane</link>. Destruktor biorący pod uwagę niszczenie nie tylko wskaźników do obiektów, ale również samych obiektów. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1a0fef7e6258721cbcb3c735d3cfaf3b61"/>sf::RectangleShape &amp; <emphasis role="strong">getHitbox</emphasis> ()</para>
+
+<para>Metoda zwracająca hitbox płaszczyzny. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_plane_1acc3e5d39e5b99c804d746a8e6b421620">draw</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda wyświetlająca płaszczyznę w oknie. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_plane_1a6f72d4caab756edd3a46e8eb84ed3ae4">performTick</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda wirtualna. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Metody chronione    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_plane_1a2dd645c2d4cd7bdf1df539c32d41aa67"/>virtual void <emphasis role="strong">moveElements</emphasis> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda wirtualna. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1a14f566595fd686d938dcc650b2833961"/>std::vector&lt; <link linkend="_class_moving_entity">MovingEntity</link> * &gt; <emphasis role="strong">getElements</emphasis> ()</para>
+
+<para>Metoda zwracająca listę ruchomych jednostek danej płaszczyzny. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atrybuty chronione    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_plane_1a20fdcd2712a1e7ddfbde760da79247be"/>bool <emphasis role="strong">isRight</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1acdefbc6bd4ed1b47193889e01e068000"/>std::vector&lt; <link linkend="_class_moving_entity">MovingEntity</link> * &gt; <emphasis role="strong">movingEntities</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1abfed13bc585a047f642a26b883db1fb5"/>sf::RectangleShape <emphasis role="strong">hitbox</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_plane_1ae538ef466c9786de4dc1eb9f2a2a5ba4"/>sf::Sprite <emphasis role="strong">graphic</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_plane">Plane</link> Class. Klasa definiująca podstawową płaszczyznę w grze. Płaszczyzna zawiera w sobie również mechanizm tworzenia ruchomych jednostek oraz wywołuje ich ruch. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_plane_1af47c8299c251ecaa1a586951bb61c727"/><section>
+    <title>Plane()</title>
+<indexterm><primary>Plane</primary><secondary>Plane</secondary></indexterm>
+<indexterm><primary>Plane</primary><secondary>Plane</secondary></indexterm>
+<para><computeroutput>Plane::Plane (sf::RenderWindow &amp; window, bool right, int positionY)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_plane">Plane</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>right</entry><entry>
+<para>wartość logiczna określająca kierunek ruchu jednostek. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>positionY</entry><entry>
+<para>poziom na którym znajduje się płaszczyzna na mapie. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_plane_1acc3e5d39e5b99c804d746a8e6b421620"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>Plane</secondary></indexterm>
+<indexterm><primary>Plane</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void Plane::draw (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda wyświetlająca płaszczyznę w oknie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_plane_1a6f72d4caab756edd3a46e8eb84ed3ae4"/><section>
+    <title>performTick()</title>
+<indexterm><primary>performTick</primary><secondary>Plane</secondary></indexterm>
+<indexterm><primary>Plane</primary><secondary>performTick</secondary></indexterm>
+<para><computeroutput>void Plane::performTick (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Metoda wirtualna. </para>
+</para>
+<para>
+Reimplementowana w <link linkend="_class_river_plane_1a0d72f0b308522b189b3ac1542d21fa42">RiverPlane</link> i <link linkend="_class_road_plane_1a6bb5fa719b494b3102fbe58ac31da953">RoadPlane</link>.</para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/plane.hfrog/plane.cpp</section>
+</section>

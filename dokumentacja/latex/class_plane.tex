@@ -1,0 +1,119 @@
+\doxysection{Dokumentacja klasy Plane}
+\label{class_plane}\index{Plane@{Plane}}
+
+
+\doxyref{Plane}{str.}{class_plane} Class. Klasa definiująca podstawową płaszczyznę w grze. Płaszczyzna zawiera w sobie również mechanizm tworzenia ruchomych jednostek oraz wywołuje ich ruch.  
+
+
+
+
+{\ttfamily \#include $<$plane.\+h$>$}
+
+Diagram dziedziczenia dla Plane\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plane}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Plane} (sf\+::\+Render\+Window \&window, bool right, int positionY)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Plane}{str.}{class_plane}. \end{DoxyCompactList}\item 
+\mbox{\label{class_plane_a69abd86051c880dcb44b249ad10c4436}} 
+{\bfseries $\sim$\+Plane} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxyref{Plane}{str.}{class_plane}. Destruktor biorący pod uwagę niszczenie nie tylko wskaźników do obiektów, ale również samych obiektów. \end{DoxyCompactList}\item 
+\mbox{\label{class_plane_a0fef7e6258721cbcb3c735d3cfaf3b61}} 
+sf\+::\+Rectangle\+Shape \& {\bfseries get\+Hitbox} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca hitbox płaszczyzny. \end{DoxyCompactList}\item 
+void \textbf{ draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda wyświetlająca płaszczyznę w oknie. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_plane_a2dd645c2d4cd7bdf1df539c32d41aa67}} 
+virtual void {\bfseries move\+Elements} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna. \end{DoxyCompactList}\item 
+\mbox{\label{class_plane_a14f566595fd686d938dcc650b2833961}} 
+std\+::vector$<$ \textbf{ Moving\+Entity} $\ast$ $>$ {\bfseries get\+Elements} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca listę ruchomych jednostek danej płaszczyzny. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_plane_a20fdcd2712a1e7ddfbde760da79247be}} 
+bool {\bfseries is\+Right}
+\item 
+\mbox{\label{class_plane_acdefbc6bd4ed1b47193889e01e068000}} 
+std\+::vector$<$ \textbf{ Moving\+Entity} $\ast$ $>$ {\bfseries moving\+Entities}
+\item 
+\mbox{\label{class_plane_abfed13bc585a047f642a26b883db1fb5}} 
+sf\+::\+Rectangle\+Shape {\bfseries hitbox}
+\item 
+\mbox{\label{class_plane_ae538ef466c9786de4dc1eb9f2a2a5ba4}} 
+sf\+::\+Sprite {\bfseries graphic}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Plane}{str.}{class_plane} Class. Klasa definiująca podstawową płaszczyznę w grze. Płaszczyzna zawiera w sobie również mechanizm tworzenia ruchomych jednostek oraz wywołuje ich ruch. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_plane_af47c8299c251ecaa1a586951bb61c727}} 
+\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\doxysubsubsection{Plane()}
+{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{bool}]{right,  }\item[{int}]{positionY }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Plane}{str.}{class_plane}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostek. \\
+\hline
+{\em positionY} & poziom na którym znajduje się płaszczyzna na mapie. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_plane_acc3e5d39e5b99c804d746a8e6b421620}} 
+\index{Plane@{Plane}!draw@{draw}}
+\index{draw@{draw}!Plane@{Plane}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Plane\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda wyświetlająca płaszczyznę w oknie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_plane_a6f72d4caab756edd3a46e8eb84ed3ae4}} 
+\index{Plane@{Plane}!performTick@{performTick}}
+\index{performTick@{performTick}!Plane@{Plane}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Plane\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda wirtualna. 
+
+
+
+Reimplementowana w \textbf{ River\+Plane} \doxyref{}{str.}{class_river_plane_a0d72f0b308522b189b3ac1542d21fa42} i \textbf{ Road\+Plane} \doxyref{}{str.}{class_road_plane_a6bb5fa719b494b3102fbe58ac31da953}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/plane.\+h\item 
+frog/plane.\+cpp\end{DoxyCompactItemize}

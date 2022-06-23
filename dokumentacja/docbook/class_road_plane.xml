@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_road_plane" xml:lang="pl">
+<title>Dokumentacja klasy RoadPlane</title>
+<indexterm><primary>RoadPlane</primary></indexterm>
+<para>
+
+<para><link linkend="_class_road_plane">RoadPlane</link> Class. Klasa dziędzicząca po klasie <link linkend="_class_plane">Plane</link>. Specjalny typ płaszczyzny po której jeżdżą samochody. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;roadPlane.h&gt;</computeroutput>
+</para>
+<para>Diagram dziedziczenia dla RoadPlane    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_road_plane.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_road_plane_1a92638fe09d6583ec95672bc126d4f066">RoadPlane</link> (sf::RenderWindow &amp;window, bool right, int startingPosition, int globalTickrate)</para>
+
+<para>Konstruktor klasy <link linkend="_class_road_plane">RoadPlane</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_road_plane_1a6bb5fa719b494b3102fbe58ac31da953">performTick</link> (sf::RenderWindow &amp;window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp;frog)</para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Dodatkowe Dziedziczone Składowe    </title>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_road_plane">RoadPlane</link> Class. Klasa dziędzicząca po klasie <link linkend="_class_plane">Plane</link>. Specjalny typ płaszczyzny po której jeżdżą samochody. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_road_plane_1a92638fe09d6583ec95672bc126d4f066"/><section>
+    <title>RoadPlane()</title>
+<indexterm><primary>RoadPlane</primary><secondary>RoadPlane</secondary></indexterm>
+<indexterm><primary>RoadPlane</primary><secondary>RoadPlane</secondary></indexterm>
+<para><computeroutput>RoadPlane::RoadPlane (sf::RenderWindow &amp; window, bool right, int startingPosition, int globalTickrate)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_road_plane">RoadPlane</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>right</entry><entry>
+<para>wartość logiczna określająca kierunek ruchu jednostek. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>startingPosition</entry><entry>
+<para>pozycja startowa płaszczyzny. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_road_plane_1a6bb5fa719b494b3102fbe58ac31da953"/><section>
+    <title>performTick()</title>
+<indexterm><primary>performTick</primary><secondary>RoadPlane</secondary></indexterm>
+<indexterm><primary>RoadPlane</primary><secondary>performTick</secondary></indexterm>
+<para><computeroutput>void RoadPlane::performTick (sf::RenderWindow &amp; window, int globalTickrate, <link linkend="_class_frog">Frog</link> &amp; frog)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>referencja do okna na którym wyświetlana jest mapa. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>globalTickrate</entry><entry>
+<para>liczba ticków gry na jedną klatkę. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>frog</entry><entry>
+<para>referencja do jednostki gracza. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplementowana z <link linkend="_class_plane_1a6f72d4caab756edd3a46e8eb84ed3ae4">Plane</link>.</para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/roadPlane.hfrog/roadPlane.cpp</section>
+</section>

@@ -1,0 +1,137 @@
+\doxysection{Dokumentacja klasy Moving\+Entity}
+\label{class_moving_entity}\index{MovingEntity@{MovingEntity}}
+
+
+\doxyref{Moving\+Entity}{str.}{class_moving_entity} Class. Klasa definiująca bazową ruchomą jednostkę.  
+
+
+
+
+{\ttfamily \#include $<$moving\+Entity.\+h$>$}
+
+Diagram dziedziczenia dla Moving\+Entity\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moving_entity}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Moving\+Entity} (sf\+::\+Vector2f size, bool right, int global\+Tickrate, sf\+::\+Vector2f starting\+Position)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Moving\+Entity}{str.}{class_moving_entity}. \end{DoxyCompactList}\item 
+bool \textbf{ frog\+On\+Object} (sf\+::\+Render\+Window \&window, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca wartość logiczną mówiącą o tym, czy gracz znajduje się na jednostce. \end{DoxyCompactList}\item 
+\mbox{\label{class_moving_entity_aa00f63cf9615b282db02119fb917b947}} 
+void {\bfseries reload\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za adaptację rozmiarów i pozycji tekstury do hitboxa. \end{DoxyCompactList}\item 
+\mbox{\label{class_moving_entity_a5e5cf69e98f054b8291ea87ba158dfbe}} 
+sf\+::\+Rectangle\+Shape \& {\bfseries get\+Hitbox} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca referencję do hitboxa. \end{DoxyCompactList}\item 
+void \textbf{ draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda wyświetlająca jednostkę w oknie. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_moving_entity_af04f26f911efccd0469a951aa237a356}} 
+virtual void {\bfseries move} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_moving_entity_a7812e3245ef6296faf79f8f5fb573a13}} 
+bool {\bfseries is\+Right}
+\item 
+\mbox{\label{class_moving_entity_aebb66e230d6b3caf1a27d42cfc3e6f19}} 
+int {\bfseries tickrate}
+\item 
+\mbox{\label{class_moving_entity_a97cd4cf7c11e44bd09c6e881007cc589}} 
+sf\+::\+Rectangle\+Shape {\bfseries hitbox}
+\item 
+\mbox{\label{class_moving_entity_a7d8d96dea28a18c1e0ca846217b142bb}} 
+sf\+::\+Sprite {\bfseries graphic}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Moving\+Entity}{str.}{class_moving_entity} Class. Klasa definiująca bazową ruchomą jednostkę. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_moving_entity_a6bc306db4c769c8a4f691e57b4cf2e5b}} 
+\index{MovingEntity@{MovingEntity}!MovingEntity@{MovingEntity}}
+\index{MovingEntity@{MovingEntity}!MovingEntity@{MovingEntity}}
+\doxysubsubsection{MovingEntity()}
+{\footnotesize\ttfamily Moving\+Entity\+::\+Moving\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{size,  }\item[{bool}]{right,  }\item[{int}]{global\+Tickrate,  }\item[{sf\+::\+Vector2f}]{starting\+Position }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Moving\+Entity}{str.}{class_moving_entity}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size} & wektor określający rozmar jednostki. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostki. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em starting\+Position} & pozycja startowa jednostki. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_moving_entity_ae3caae68a2ea2a8e355c1b1a1f720f85}} 
+\index{MovingEntity@{MovingEntity}!draw@{draw}}
+\index{draw@{draw}!MovingEntity@{MovingEntity}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Moving\+Entity\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda wyświetlająca jednostkę w oknie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_moving_entity_ae2e2f476f3490168b909615ac71a5a25}} 
+\index{MovingEntity@{MovingEntity}!frogOnObject@{frogOnObject}}
+\index{frogOnObject@{frogOnObject}!MovingEntity@{MovingEntity}}
+\doxysubsubsection{frogOnObject()}
+{\footnotesize\ttfamily bool Moving\+Entity\+::frog\+On\+Object (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})}
+
+
+
+Metoda zwracająca wartość logiczną mówiącą o tym, czy gracz znajduje się na jednostce. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_moving_entity_a59cd99294f16f67402016cfd85a526bd}} 
+\index{MovingEntity@{MovingEntity}!performTick@{performTick}}
+\index{performTick@{performTick}!MovingEntity@{MovingEntity}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Moving\+Entity\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda wirtualna. 
+
+
+
+Reimplementowana w \textbf{ Car\+Entity} \doxyref{}{str.}{class_car_entity_a03ca22a1e7f6a250a9001b026ea72345} i \textbf{ Log\+Entity} \doxyref{}{str.}{class_log_entity_a0e58cf2ab8cde04cf7d408bebdef4916}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/moving\+Entity.\+h\item 
+frog/moving\+Entity.\+cpp\end{DoxyCompactItemize}

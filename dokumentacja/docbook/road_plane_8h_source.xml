@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_road_plane_8h_source" xml:lang="pl">
+<title>roadPlane.h</title>
+<indexterm><primary>frog/roadPlane.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;plane.h&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;carEntity.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;spriteDispenser.h&quot;</emphasis>
+5 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_road_plane">RoadPlane</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_plane">Plane</link>
+12 {
+13 <emphasis role="keyword">public</emphasis>:
+21 &#32;&#32;&#32;&#32;<link linkend="_class_road_plane_1a92638fe09d6583ec95672bc126d4f066">RoadPlane</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;right,&#32;<emphasis role="keywordtype">int</emphasis>&#32;startingPosition,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate);
+28 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_road_plane_1a6bb5fa719b494b3102fbe58ac31da953">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+29 <emphasis role="keyword">private</emphasis>:
+36 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;moveElements(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+37 };
+38 
+</programlisting></section>

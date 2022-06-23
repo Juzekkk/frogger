@@ -1,0 +1,20 @@
+\doxysection{road\+Plane.\+h}
+\label{road_plane_8h_source}\index{frog/roadPlane.h@{frog/roadPlane.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}plane.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}carEntity.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}spriteDispenser.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }RoadPlane : \textcolor{keyword}{public} Plane}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     RoadPlane(sf::RenderWindow\& window, \textcolor{keywordtype}{bool} right, \textcolor{keywordtype}{int} startingPosition, \textcolor{keywordtype}{int} globalTickrate);}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} performTick(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} moveElements(sf::RenderWindow\& window, \textcolor{keywordtype}{int} globalTickrate, Frog\& frog);}
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+
+\end{DoxyCode}

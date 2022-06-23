@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="pl">
+    <info>
+    <title>frogger</title>
+    </info>
+<chapter>
+    <title>Dokumentacja klas</title>
+    <xi:include href="class_car_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_frog.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_log_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_map.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_moving_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_plane.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_river_plane.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_road_plane.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_sprite_dispenser.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Dokumentacja plików</title>
+    <xi:include href="car_entity_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="enum_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="frog_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="game_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="log_entity_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="map_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="moving_entity_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="plane_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="resource_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="river_plane_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="road_plane_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sprite_dispenser_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

@@ -1,0 +1,117 @@
+\doxysection{Dokumentacja klasy Frog}
+\label{class_frog}\index{Frog@{Frog}}
+
+
+\doxyref{Frog}{str.}{class_frog} Class. Klasa będąca jednostką gracza. Zawiera w sobie mechanizm poruszania się, reagowania na input gracza oraz mechanikę umierania.  
+
+
+
+
+{\ttfamily \#include $<$frog.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Frog} (sf\+::\+Vector2f window\+Size)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Frog}{str.}{class_frog}. \end{DoxyCompactList}\item 
+void \textbf{ move} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za ręczne sterowanie. \end{DoxyCompactList}\item 
+void \textbf{ move} (sf\+::\+Vector2f vector)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za przesunięcie żaby o dany wektor. \end{DoxyCompactList}\item 
+void \textbf{ die} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za przesunięcie żaby w miejsce startowe. \end{DoxyCompactList}\item 
+\mbox{\label{class_frog_a9b72a2e694d827cdafca11bb7281814d}} 
+sf\+::\+Rectangle\+Shape \& {\bfseries get\+Hitbox} ()
+\item 
+void \textbf{ draw} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za wyświetlania żaby na mapie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Frog}{str.}{class_frog} Class. Klasa będąca jednostką gracza. Zawiera w sobie mechanizm poruszania się, reagowania na input gracza oraz mechanikę umierania. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_frog_a61c74181216368ed1de1a9dd015f07fe}} 
+\index{Frog@{Frog}!Frog@{Frog}}
+\index{Frog@{Frog}!Frog@{Frog}}
+\doxysubsubsection{Frog()}
+{\footnotesize\ttfamily Frog\+::\+Frog (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{window\+Size }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Frog}{str.}{class_frog}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window\+Size} & rozmiar okna na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_frog_a0aefa33db680fc12068c5c10bff5a8cc}} 
+\index{Frog@{Frog}!die@{die}}
+\index{die@{die}!Frog@{Frog}}
+\doxysubsubsection{die()}
+{\footnotesize\ttfamily void Frog\+::die (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za przesunięcie żaby w miejsce startowe. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_frog_aed0c203b0407b63cc22cc39571b8e2b7}} 
+\index{Frog@{Frog}!draw@{draw}}
+\index{draw@{draw}!Frog@{Frog}}
+\doxysubsubsection{draw()}
+{\footnotesize\ttfamily void Frog\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za wyświetlania żaby na mapie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_frog_a983b92db61de57a4a27c55966dc2652d}} 
+\index{Frog@{Frog}!move@{move}}
+\index{move@{move}!Frog@{Frog}}
+\doxysubsubsection{move()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frog\+::move (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za ręczne sterowanie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_frog_a5104b90b566b13ac1c5686fed0a76091}} 
+\index{Frog@{Frog}!move@{move}}
+\index{move@{move}!Frog@{Frog}}
+\doxysubsubsection{move()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frog\+::move (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{vector }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za przesunięcie żaby o dany wektor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em vector} & wektor przesunięcia. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/frog.\+h\item 
+frog/frog.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_map_8h_source" xml:lang="pl">
+<title>map.h</title>
+<indexterm><primary>frog/map.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;plane.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;roadPlane.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;riverPlane.h&quot;</emphasis>
+6 
+7 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_map">Map</link>
+15 {
+16 <emphasis role="keyword">public</emphasis>:
+23 &#32;&#32;&#32;&#32;<link linkend="_class_map_1a76f8de6b0e0155e7b47bd3e9dbd73dbe">Map</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+28 &#32;&#32;&#32;&#32;<link linkend="_class_map_1aa403fbe09394ccf39747588f5168e3b2">~Map</link>();
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_map_1a2a23d2e359c6fefd916380304ffb0b72">nextLevel</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+42 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_map_1aab0d6fb11fc29732162390c37004e256">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_map_1ab9e768d51062f069be46203e4e06643e">draw</link>(sf::RenderWindow&amp;&#32;window);
+48 <emphasis role="keyword">private</emphasis>:
+49 &#32;&#32;&#32;&#32;std::vector&lt;Plane*&gt;&#32;planes;
+50 };
+51 
+</programlisting></section>

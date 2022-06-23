@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_frog" xml:lang="pl">
+<title>Dokumentacja klasy Frog</title>
+<indexterm><primary>Frog</primary></indexterm>
+<para>
+
+<para><link linkend="_class_frog">Frog</link> Class. Klasa będąca jednostką gracza. Zawiera w sobie mechanizm poruszania się, reagowania na input gracza oraz mechanikę umierania. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;frog.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Metody publiczne    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_frog_1a61c74181216368ed1de1a9dd015f07fe">Frog</link> (sf::Vector2f windowSize)</para>
+
+<para>Konstruktor klasy <link linkend="_class_frog">Frog</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_frog_1a983b92db61de57a4a27c55966dc2652d">move</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda odpowiedzialna za ręczne sterowanie. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_frog_1a5104b90b566b13ac1c5686fed0a76091">move</link> (sf::Vector2f vector)</para>
+
+<para>Metoda odpowiedzialna za przesunięcie żaby o dany wektor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_frog_1a0aefa33db680fc12068c5c10bff5a8cc">die</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda odpowiedzialna za przesunięcie żaby w miejsce startowe. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_frog_1a9b72a2e694d827cdafca11bb7281814d"/>sf::RectangleShape &amp; <emphasis role="strong">getHitbox</emphasis> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_frog_1aed0c203b0407b63cc22cc39571b8e2b7">draw</link> (sf::RenderWindow &amp;window)</para>
+
+<para>Metoda odpowiedzialna za wyświetlania żaby na mapie. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Opis szczegółowy</title>
+
+<para><link linkend="_class_frog">Frog</link> Class. Klasa będąca jednostką gracza. Zawiera w sobie mechanizm poruszania się, reagowania na input gracza oraz mechanikę umierania. </para>
+</section>
+<section>
+<title>Dokumentacja konstruktora i destruktora</title>
+<anchor xml:id="_class_frog_1a61c74181216368ed1de1a9dd015f07fe"/><section>
+    <title>Frog()</title>
+<indexterm><primary>Frog</primary><secondary>Frog</secondary></indexterm>
+<indexterm><primary>Frog</primary><secondary>Frog</secondary></indexterm>
+<para><computeroutput>Frog::Frog (sf::Vector2f windowSize)</computeroutput></para><para>
+
+<para>Konstruktor klasy <link linkend="_class_frog">Frog</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>windowSize</entry><entry>
+<para>rozmiar okna na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Dokumentacja funkcji składowych</title>
+<anchor xml:id="_class_frog_1a0aefa33db680fc12068c5c10bff5a8cc"/><section>
+    <title>die()</title>
+<indexterm><primary>die</primary><secondary>Frog</secondary></indexterm>
+<indexterm><primary>Frog</primary><secondary>die</secondary></indexterm>
+<para><computeroutput>void Frog::die (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda odpowiedzialna za przesunięcie żaby w miejsce startowe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_frog_1aed0c203b0407b63cc22cc39571b8e2b7"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>Frog</secondary></indexterm>
+<indexterm><primary>Frog</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void Frog::draw (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda odpowiedzialna za wyświetlania żaby na mapie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_frog_1a983b92db61de57a4a27c55966dc2652d"/><section>
+    <title>move()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>move</primary><secondary>Frog</secondary></indexterm>
+<indexterm><primary>Frog</primary><secondary>move</secondary></indexterm>
+<para><computeroutput>void Frog::move (sf::RenderWindow &amp; window)</computeroutput></para><para>
+
+<para>Metoda odpowiedzialna za ręczne sterowanie. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>okno na którym rysowana jest mapa. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_frog_1a5104b90b566b13ac1c5686fed0a76091"/><section>
+    <title>move()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>move</primary><secondary>Frog</secondary></indexterm>
+<indexterm><primary>Frog</primary><secondary>move</secondary></indexterm>
+<para><computeroutput>void Frog::move (sf::Vector2f vector)</computeroutput></para><para>
+
+<para>Metoda odpowiedzialna za przesunięcie żaby o dany wektor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parametry</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>vector</entry><entry>
+<para>wektor przesunięcia. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+Dokumentacja dla tej klasy została wygenerowana z plików:</para>
+frog/frog.hfrog/frog.cpp</section>
+</section>

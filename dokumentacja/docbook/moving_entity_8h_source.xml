@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_moving_entity_8h_source" xml:lang="pl">
+<title>movingEntity.h</title>
+<indexterm><primary>frog/movingEntity.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;frog.h&quot;</emphasis>
+4 
+5 
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_moving_entity">MovingEntity</link>
+11 {
+12 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;<link linkend="_class_moving_entity_1a6bc306db4c769c8a4f691e57b4cf2e5b">MovingEntity</link>(sf::Vector2f&#32;size,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;right,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;sf::Vector2f&#32;startingPosition);
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_moving_entity_1ae2e2f476f3490168b909615ac71a5a25">frogOnObject</link>(sf::RenderWindow&amp;&#32;window,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+27 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_moving_entity_1aa00f63cf9615b282db02119fb917b947">reloadTexture</link>();
+30 &#32;&#32;&#32;&#32;sf::RectangleShape&amp;&#32;<link linkend="_class_moving_entity_1a5e5cf69e98f054b8291ea87ba158dfbe">getHitbox</link>();
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_moving_entity_1ae3caae68a2ea2a8e355c1b1a1f720f85">draw</link>(sf::RenderWindow&amp;&#32;window);
+38 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_moving_entity_1a59cd99294f16f67402016cfd85a526bd">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+39 <emphasis role="keyword">protected</emphasis>:
+43 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_moving_entity_1af04f26f911efccd0469a951aa237a356">move</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+44 
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isRight;
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;tickrate;
+47 &#32;&#32;&#32;&#32;sf::RectangleShape&#32;hitbox;
+48 &#32;&#32;&#32;&#32;sf::Sprite&#32;graphic;
+49 };
+</programlisting></section>

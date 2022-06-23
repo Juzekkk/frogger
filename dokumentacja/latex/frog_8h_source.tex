@@ -1,0 +1,24 @@
+\doxysection{frog.\+h}
+\label{frog_8h_source}\index{frog/frog.h@{frog/frog.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}spriteDispenser.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }Frog}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     Frog(sf::Vector2f windowSize);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} move(sf::RenderWindow\& window);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} move(sf::Vector2f vector);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} die(sf::RenderWindow\& window);}
+\DoxyCodeLine{35     sf::RectangleShape\& getHitbox();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} draw(sf::RenderWindow\& window);}
+\DoxyCodeLine{41 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     sf::RectangleShape hitbox;}
+\DoxyCodeLine{43     sf::Sprite graphic;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_game_8h_source" xml:lang="pl">
+<title>game.h</title>
+<indexterm><primary>frog/game.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&lt;SFML/Graphics.hpp&gt;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;frog.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;map.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;spriteDispenser.h&quot;</emphasis>
+6 
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game">Game</link>
+16 {
+17 <emphasis role="keyword">public</emphasis>:
+23 &#32;&#32;&#32;&#32;<link linkend="_class_game_1a63a1ce9f52dbbcc310def23d86755d60">Game</link>(<emphasis role="keywordtype">int</emphasis>&#32;tick_rate,&#32;<emphasis role="keywordtype">int</emphasis>&#32;FPS);
+28 &#32;&#32;&#32;&#32;<link linkend="_class_game_1ae3d112ca6e0e55150d2fdbc704474530">~Game</link>();
+32 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_1a1ab78f5ed0d5ea879157357cf2fb2afa">run</link>();
+33 <emphasis role="keyword">private</emphasis>:
+34 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;frogOnMeta();
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;tickrate;
+41 &#32;&#32;&#32;&#32;sf::RenderWindow*&#32;window;
+42 &#32;&#32;&#32;&#32;<link linkend="_class_frog">Frog</link>*&#32;frog;
+43 &#32;&#32;&#32;&#32;<link linkend="_class_map">Map</link>*&#32;map;
+44 &#32;&#32;&#32;&#32;sf::Sprite&#32;background;
+45 };
+46 
+</programlisting></section>

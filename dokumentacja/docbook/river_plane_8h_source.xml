@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_river_plane_8h_source" xml:lang="pl">
+<title>riverPlane.h</title>
+<indexterm><primary>frog/riverPlane.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;plane.h&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;logEntity.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;spriteDispenser.h&quot;</emphasis>
+5 
+12 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_river_plane">RiverPlane</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_plane">Plane</link>
+13 {
+14 <emphasis role="keyword">public</emphasis>:
+22 &#32;&#32;&#32;&#32;<link linkend="_class_river_plane_1af5c7f15dd37528d99ff9cd7121189301">RiverPlane</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;right,&#32;<emphasis role="keywordtype">int</emphasis>&#32;startingPosition,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate);
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_river_plane_1a0d72f0b308522b189b3ac1542d21fa42">performTick</link>(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+30 <emphasis role="keyword">private</emphasis>:
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;moveElements(sf::RenderWindow&amp;&#32;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;globalTickrate,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+43 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;frogOnRiver(sf::RenderWindow&amp;&#32;window,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;frogOnLog(sf::RenderWindow&amp;&#32;window,&#32;<link linkend="_class_frog">Frog</link>&amp;&#32;frog);
+50 };
+</programlisting></section>

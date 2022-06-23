@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja klasy Road\+Plane}
+\label{class_road_plane}\index{RoadPlane@{RoadPlane}}
+
+
+\doxyref{Road\+Plane}{str.}{class_road_plane} Class. Klasa dziędzicząca po klasie \doxyref{Plane}{str.}{class_plane}. Specjalny typ płaszczyzny po której jeżdżą samochody.  
+
+
+
+
+{\ttfamily \#include $<$road\+Plane.\+h$>$}
+
+Diagram dziedziczenia dla Road\+Plane\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_road_plane}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Road\+Plane} (sf\+::\+Render\+Window \&window, bool right, int starting\+Position, int global\+Tickrate)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxyref{Road\+Plane}{str.}{class_road_plane}. \end{DoxyCompactList}\item 
+virtual void \textbf{ perform\+Tick} (sf\+::\+Render\+Window \&window, int global\+Tickrate, \textbf{ Frog} \&frog)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+\doxyref{Road\+Plane}{str.}{class_road_plane} Class. Klasa dziędzicząca po klasie \doxyref{Plane}{str.}{class_plane}. Specjalny typ płaszczyzny po której jeżdżą samochody. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\label{class_road_plane_a92638fe09d6583ec95672bc126d4f066}} 
+\index{RoadPlane@{RoadPlane}!RoadPlane@{RoadPlane}}
+\index{RoadPlane@{RoadPlane}!RoadPlane@{RoadPlane}}
+\doxysubsubsection{RoadPlane()}
+{\footnotesize\ttfamily Road\+Plane\+::\+Road\+Plane (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{bool}]{right,  }\item[{int}]{starting\+Position,  }\item[{int}]{global\+Tickrate }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxyref{Road\+Plane}{str.}{class_road_plane}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & okno na którym rysowana jest mapa. \\
+\hline
+{\em right} & wartość logiczna określająca kierunek ruchu jednostek. \\
+\hline
+{\em starting\+Position} & pozycja startowa płaszczyzny. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\label{class_road_plane_a6bb5fa719b494b3102fbe58ac31da953}} 
+\index{RoadPlane@{RoadPlane}!performTick@{performTick}}
+\index{performTick@{performTick}!RoadPlane@{RoadPlane}}
+\doxysubsubsection{performTick()}
+{\footnotesize\ttfamily void Road\+Plane\+::perform\+Tick (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int}]{global\+Tickrate,  }\item[{\textbf{ Frog} \&}]{frog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metoda odpowiadająca za przeprowadzenie jednego tiku gry dla wszystkich jednostek na płaszczyźnie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em window} & referencja do okna na którym wyświetlana jest mapa. \\
+\hline
+{\em global\+Tickrate} & liczba ticków gry na jedną klatkę. \\
+\hline
+{\em frog} & referencja do jednostki gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \textbf{ Plane} \doxyref{}{str.}{class_plane_a6f72d4caab756edd3a46e8eb84ed3ae4}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+frog/road\+Plane.\+h\item 
+frog/road\+Plane.\+cpp\end{DoxyCompactItemize}
